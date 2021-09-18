@@ -1,16 +1,13 @@
 package com.gm.Algoritmos;
 
-public class AlgoritmoQuickSort {
+import com.gm.Algoritmos.Interface.ISort;
 
-    public void QuickSort(int[] vetor){
-        LogicaQuickSort(vetor, 0, vetor.length - 1);
-    }
-
-    private void LogicaQuickSort(int [] vetor, int inicio, int fim){
+public class AlgoritmoQuickSort implements ISort {
+    private void QuickSort(int [] vetor, int inicio, int fim){
         if(inicio < fim){
             int p = Partition(vetor, inicio, fim);
-            LogicaQuickSort(vetor, inicio, p-1);
-            LogicaQuickSort(vetor, p+1, fim);
+            QuickSort(vetor, inicio, p-1);
+            QuickSort(vetor, p+1, fim);
         }
     }
 
@@ -30,5 +27,10 @@ public class AlgoritmoQuickSort {
         vetor[i] = vetor[fim];
         vetor[fim] = aux;
         return i;
+    }
+
+    @Override
+    public void Sort(int[] vetor) {
+        QuickSort(vetor, 0, vetor.length - 1);        
     }
 }

@@ -32,7 +32,7 @@ public class App
 
             int[] teste = massaDeVetores.get(TamanhoVetorEnum.D10).get(0);
 
-            _algoritmos.QuickSort(teste);
+            _algoritmos.quickSort.Sort(teste);
 
 
             /*

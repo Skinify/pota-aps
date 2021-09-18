@@ -1,20 +1,13 @@
 package com.gm.Algoritmos;
 
+import com.gm.Algoritmos.Interface.ISort;
+
 public class Algoritmos {
-    private AlgoritmoMergeSort _mergeSort;
-    private AlgoritmoQuickSort _quickSort;
+    public ISort mergeSort;
+    public ISort quickSort;
 
     public Algoritmos(){
-        _mergeSort = new AlgoritmoMergeSort();
-        _quickSort = new AlgoritmoQuickSort();
+        mergeSort = new AlgoritmoMergeSort();
+        quickSort = new AlgoritmoQuickSort();
     }
-    
-    public void MergeSort(int[] vetor){
-        _mergeSort.MergeSort(vetor);
-    }
-
-    public void QuickSort(int[] vetor){
-        _quickSort.QuickSort(vetor);
-    }
-
 }
