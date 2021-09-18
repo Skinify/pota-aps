@@ -11,6 +11,14 @@ public abstract class BaseSort implements ISort{
         return aux;
     }
 
+    public boolean Igual(int a, int b){
+        return a == b;
+    }
+
+    public boolean Diferente(int a, int b){
+        return a != b;
+    }
+
     public boolean Maior(int a, int b){
         _compCont++;
         return a > b;

@@ -6,7 +6,6 @@ import java.util.List;
 import com.gm.Algoritmos.Base.BaseSort;
 
 public class Algoritmos {
-    //public ISort mergeSort, quickSort, bubbleSort, selectionSort, insertionSort, heapSort, countSort, bucketSort, radixSort;
     public List<BaseSort> listaDeAlgoritmos = new ArrayList<BaseSort>();
 
     public Algoritmos(){

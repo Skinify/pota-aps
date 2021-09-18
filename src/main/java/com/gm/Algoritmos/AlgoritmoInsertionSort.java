@@ -4,7 +4,7 @@ import com.gm.Algoritmos.Base.BaseSort;
 
 public class AlgoritmoInsertionSort extends BaseSort{
     private void InsertionSort(int[] vetor, int n){
-        if (n <= 1)
+        if (MenorIgual(n, 1))
             return;
 
         InsertionSort( vetor, n-1 );
@@ -12,7 +12,7 @@ public class AlgoritmoInsertionSort extends BaseSort{
         int ultimo = vetor[n-1];
         int j = n-2;
 
-        while (j >= 0 && vetor[j] > ultimo)
+        while (MaiorIgual(j, 0) && Maior(vetor[j], ultimo))
         {
             vetor[j+1] = vetor[j];
             j--;

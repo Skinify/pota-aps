@@ -6,10 +6,10 @@ public class AlgoritmoHeapSort extends BaseSort {
     private void HeapSort(int[] vetor){
         int n = vetor.length;
  
-        for (int i = n / 2 - 1; i >= 0; i--)
+        for (int i = n / 2 - 1; MaiorIgual(i, 0); i--)
         Heapify(vetor, n, i);
  
-        for (int i = n - 1; i > 0; i--) {
+        for (int i = n - 1; Maior(i, 0); i--) {
             int temp = vetor[0];
             vetor[0] = vetor[i];
             vetor[i] = temp;
@@ -24,13 +24,13 @@ public class AlgoritmoHeapSort extends BaseSort {
         int l = 2 * i + 1;
         int r = 2 * i + 2; 
  
-        if (l < n && vetor[l] > vetor[largest])
+        if (Menor(l, n) && Maior( vetor[l], vetor[largest]))
             largest = l; 
     
-        if (r < n && vetor[r] > vetor[largest])
+        if (Menor(r, n) && Maior(vetor[r], vetor[largest]))
             largest = r;
  
-        if (largest != i) {
+        if (Diferente(largest, i)) {
             int swap = vetor[i];
             vetor[i] = vetor[largest];
             vetor[largest] = swap;

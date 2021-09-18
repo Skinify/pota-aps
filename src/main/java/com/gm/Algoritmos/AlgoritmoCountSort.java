@@ -7,31 +7,31 @@ public class AlgoritmoCountSort extends BaseSort {
         int[] output = new int[size + 1];
 
         int max = vetor[0];
-        for (int i = 1; i < size; i++) {
-          if (vetor[i] > max)
+        for (int i = 1;Menor(i, size); i++) {
+          if (Maior(vetor[i], max))
             max = vetor[i];
         }
         
         int[] count = new int[max + 1];
     
-        for (int i = 0; i < max; ++i) {
+        for (int i = 0; Menor(i, max); ++i) {
           count[i] = 0;
         }
     
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; Menor(i, size); i++) {
           count[vetor[i]]++;
         }
     
-        for (int i = 1; i <= max; i++) {
+        for (int i = 1; MenorIgual(i, max); i++) {
           count[i] += count[i - 1];
         }
     
-        for (int i = size - 1; i >= 0; i--) {
+        for (int i = size - 1; MaiorIgual(i, 0); i--) {
           output[count[vetor[i]] - 1] = vetor[i];
           count[vetor[i]]--;
         }
     
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; Menor(i, size); i++) {
           vetor[i] = output[i];
         }
     }

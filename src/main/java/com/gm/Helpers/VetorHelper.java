@@ -30,24 +30,4 @@ public class VetorHelper {
             default: throw new UnsupportedOperationException();
         }
     }
-
-    public static int Max(int vetor[]){
-        int max = vetor[0];
-        for (int value : vetor) {
-            if (value > max) {
-                max = value;
-            }
-        }
-        return max;
-    }
-
-    public static int Min(int vetor[]){
-        int min = vetor[0];
-        for (int value : vetor) {
-            if (value < min) {
-                min = value;
-            }
-        }
-        return min;
-    }
 }

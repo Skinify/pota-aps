@@ -4,12 +4,12 @@ import com.gm.Algoritmos.Base.BaseSort;
 
 public class AlgoritmoSelectionSort extends BaseSort {
     private void SelectionSort(int[] vetor, int n, int index){
-        if (index == n)
+        if (Igual(index, n))
             return;
   
         int k = MinIndex(vetor, index, n-1);
     
-        if (k != index){
+        if (Diferente(k, index)){
             int temp = vetor[k];
             vetor[k] = vetor[index];
             vetor[index] = temp;
@@ -19,12 +19,12 @@ public class AlgoritmoSelectionSort extends BaseSort {
     }
 
     private int MinIndex(int[] vetor, int i, int c){
-        if (i == c)
+        if (Igual(i, c))
             return i;
 
         int k = MinIndex(vetor, i + 1, c);
 
-        return (vetor[i] < vetor[k])? i : k;
+        return (Menor(vetor[i], vetor[k]))? i : k;
     }
 
     @Override
