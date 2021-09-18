@@ -1,19 +1,23 @@
 package com.gm.Algoritmos;
 
-import com.gm.Algoritmos.Interface.ISort;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.gm.Algoritmos.Base.BaseSort;
 
 public class Algoritmos {
-    public ISort mergeSort, quickSort, bubbleSort, selectionSort, insertionSort, heapSort, countSort, bucketSort, radixSort;
+    //public ISort mergeSort, quickSort, bubbleSort, selectionSort, insertionSort, heapSort, countSort, bucketSort, radixSort;
+    public List<BaseSort> listaDeAlgoritmos = new ArrayList<BaseSort>();
 
     public Algoritmos(){
-        mergeSort = new AlgoritmoMergeSort();
-        quickSort = new AlgoritmoQuickSort();
-        bubbleSort = new AlgoritmoBubbleSort();
-        selectionSort = new AlgoritmoSelectionSort();
-        insertionSort = new AlgoritmoInsertionSort();
-        heapSort = new AlgoritmoHeapSort();
-        countSort = new AlgoritmoCountSort();
-        bucketSort = new AlgoritmoBucketSort();
-        radixSort = new AlgoritmoRadixSort();
+        listaDeAlgoritmos.add(new AlgoritmoMergeSort());
+        listaDeAlgoritmos.add(new AlgoritmoQuickSort());
+        listaDeAlgoritmos.add(new AlgoritmoBubbleSort());
+        listaDeAlgoritmos.add(new AlgoritmoSelectionSort());
+        listaDeAlgoritmos.add(new AlgoritmoInsertionSort());
+        listaDeAlgoritmos.add(new AlgoritmoHeapSort());
+        listaDeAlgoritmos.add(new AlgoritmoCountSort());
+        listaDeAlgoritmos.add(new AlgoritmoBucketSort());
+        listaDeAlgoritmos.add(new AlgoritmoRadixSort());
     }
 }
