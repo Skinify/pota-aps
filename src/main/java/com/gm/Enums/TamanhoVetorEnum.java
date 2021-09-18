@@ -10,7 +10,7 @@ public enum TamanhoVetorEnum {
     D1000,
     D10000;
 
-    public TamanhoVetorEnum PegarTamanhoAleatorio(){
+    public static TamanhoVetorEnum PegarTamanhoAleatorio(){
         return TamanhoVetorEnum.values()[new Random().nextInt(TamanhoVetorEnum.values().length)];
     }
 }

@@ -1,4 +1,4 @@
-package com.gm;
+package com.gm.Helpers;
 
 import java.util.Random;
 
