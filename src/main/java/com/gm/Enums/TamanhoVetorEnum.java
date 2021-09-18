@@ -1,7 +1,5 @@
 package com.gm.Enums;
 
-import java.util.Random;
-
 public enum TamanhoVetorEnum {
     D5,
     D10,
@@ -9,8 +7,4 @@ public enum TamanhoVetorEnum {
     D100,
     D1000,
     D10000;
-
-    public static TamanhoVetorEnum PegarTamanhoAleatorio(){
-        return TamanhoVetorEnum.values()[new Random().nextInt(TamanhoVetorEnum.values().length)];
-    }
 }
