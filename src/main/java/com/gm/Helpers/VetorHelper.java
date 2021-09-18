@@ -5,17 +5,13 @@ import java.util.Random;
 import com.gm.Enums.TamanhoVetorEnum;
 
 public class VetorHelper {
-    private Random rnd;
+    private static Random rnd = new Random();
 
-    public VetorHelper(){
-        rnd = new Random();
-    }
-
-    public int[] GerarVetor(TamanhoVetorEnum tamanho) throws Exception{
+    public static int[] GerarVetor(TamanhoVetorEnum tamanho) throws Exception{
         try{
             int[] vetorGerado = new int[DefinirTamanho(tamanho)];
             for(int i = 0; i < vetorGerado.length; i++){
-                vetorGerado[i] = rnd.nextInt();
+                vetorGerado[i] = rnd.nextInt(100000);
             }
             return vetorGerado;
         }catch(Exception ex){
@@ -23,7 +19,7 @@ public class VetorHelper {
         }
     }
 
-    private int DefinirTamanho(TamanhoVetorEnum tamanhoVetorEnum) throws Exception{
+    private static int DefinirTamanho(TamanhoVetorEnum tamanhoVetorEnum) throws Exception{
         switch(tamanhoVetorEnum){
             case D5 : return 5;
             case D10 : return 10;
@@ -33,5 +29,25 @@ public class VetorHelper {
             case D10000 : return 10000;
             default: throw new UnsupportedOperationException();
         }
+    }
+
+    public static int Max(int vetor[]){
+        int max = vetor[0];
+        for (int value : vetor) {
+            if (value > max) {
+                max = value;
+            }
+        }
+        return max;
+    }
+
+    public static int Min(int vetor[]){
+        int min = vetor[0];
+        for (int value : vetor) {
+            if (value < min) {
+                min = value;
+            }
+        }
+        return min;
     }
 }

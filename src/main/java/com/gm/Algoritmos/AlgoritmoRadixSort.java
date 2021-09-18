@@ -1,0 +1,39 @@
+package com.gm.Algoritmos;
+
+import java.util.Arrays;
+import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Helpers.VetorHelper;
+
+public class AlgoritmoRadixSort implements ISort {
+    private void ModifiedCountSort(int arr[], int n, int exp){
+        int output[] = new int[n];
+        int i;
+        int count[] = new int[10];
+        Arrays.fill(count, 0);
+ 
+        for (i = 0; i < n; i++)
+            count[(arr[i] / exp) % 10]++;
+ 
+        for (i = 1; i < 10; i++)
+            count[i] += count[i - 1];
+ 
+        for (i = n - 1; i >= 0; i--) {
+            output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+            count[(arr[i] / exp) % 10]--;
+        }
+
+        for (i = 0; i < n; i++)
+            arr[i] = output[i];
+    }
+
+    private void RadixSort(int[] vetor, int n){
+        int m = VetorHelper.Max(vetor);
+        for (int exp = 1; m / exp > 0; exp *= 10)
+            ModifiedCountSort(vetor, n, exp);
+    }
+
+    @Override
+    public void Sort(int[] vetor) {
+        RadixSort(vetor, vetor.length);
+    }
+}
