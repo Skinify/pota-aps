@@ -1,8 +1,8 @@
 package com.gm.Algoritmos;
 
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 
-public class AlgoritmoSelectionSort implements ISort {
+public class AlgoritmoSelectionSort extends BaseSort {
     private void SelectionSort(int[] vetor, int n, int index){
         if (index == n)
             return;

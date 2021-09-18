@@ -1,8 +1,8 @@
 package com.gm.Algoritmos;
 
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 
-public class AlgoritmoMergeSort implements ISort {
+public class AlgoritmoMergeSort extends BaseSort {
     private void MergeSort(int vetor[], int[] aux, int ini, int fim){
         if(ini < fim){
             int meio = (ini + fim) / 2;

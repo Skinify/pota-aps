@@ -1,10 +1,10 @@
 package com.gm.Algoritmos;
 
 import java.util.Arrays;
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 import com.gm.Helpers.VetorHelper;
 
-public class AlgoritmoRadixSort implements ISort {
+public class AlgoritmoRadixSort extends BaseSort{
     private void ModifiedCountSort(int arr[], int n, int exp){
         int output[] = new int[n];
         int i;

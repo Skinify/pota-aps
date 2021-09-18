@@ -1,8 +1,8 @@
 package com.gm.Algoritmos;
 
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 
-public class AlgoritmoHeapSort implements ISort {
+public class AlgoritmoHeapSort extends BaseSort {
     private void HeapSort(int[] vetor){
         int n = vetor.length;
  

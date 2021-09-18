@@ -3,10 +3,10 @@ package com.gm.Algoritmos;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 import com.gm.Helpers.VetorHelper;
 
-public class AlgoritmoBucketSort implements ISort {
+public class AlgoritmoBucketSort extends BaseSort {
     private void BucketSort(int arr[], int n){
         int max = VetorHelper.Max(arr);
         int min = VetorHelper.Min(arr);

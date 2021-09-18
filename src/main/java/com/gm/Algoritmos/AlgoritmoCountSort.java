@@ -1,8 +1,8 @@
 package com.gm.Algoritmos;
 
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 
-public class AlgoritmoCountSort implements ISort {
+public class AlgoritmoCountSort extends BaseSort {
     private void CountSort(int[] vetor, int size){
         int[] output = new int[size + 1];
 

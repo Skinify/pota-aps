@@ -14,6 +14,7 @@ public class App
 {
     private static Algoritmos _algoritmos =  new Algoritmos();
     private static Map<TamanhoVetorEnum, List<int[]>> massaDeVetores = new HashMap<TamanhoVetorEnum, List<int[]>>();
+    private static Map<String, Map<TamanhoVetorEnum, Integer>> _mapaDeAnalise;
     private static final int TAMANHO_VETORES = 50;
 
     public static void main( String[] args )
@@ -22,16 +23,21 @@ public class App
             for(int i = 0; i < TamanhoVetorEnum.values().length; i++){
                 List<int[]> tempList = new ArrayList<>();
                 for(int c = 0; c < TAMANHO_VETORES; c++){
+                    int[] tempArray = VetorHelper.GerarVetor(TamanhoVetorEnum.values()[i]);
+                    //_algoritmos.bubbleSort.Sort(Arrays.copyOf(tempArray, tempArray.length));
+
                     tempList.add(VetorHelper.GerarVetor(TamanhoVetorEnum.values()[i]));
                 }
                 massaDeVetores.put(TamanhoVetorEnum.values()[i], tempList);
             }
 
+
+
             int[] testeVisual = massaDeVetores.get(TamanhoVetorEnum.D10).get(0);
 
-            _algoritmos.radixSort.Sort(testeVisual);
+            _algoritmos.radixSort.Sort(testeVisual); 
 
-            System.out.println(Arrays.toString(testeVisual));
+            //System.out.println(_algoritmos.radixSort.getClass().getSimpleName());
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

@@ -1,8 +1,8 @@
 package com.gm.Algoritmos;
 
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 
-public class AlgoritmoQuickSort implements ISort {
+public class AlgoritmoQuickSort extends BaseSort{
     private void QuickSort(int [] vetor, int inicio, int fim){
         if(inicio < fim){
             int p = Partition(vetor, inicio, fim);

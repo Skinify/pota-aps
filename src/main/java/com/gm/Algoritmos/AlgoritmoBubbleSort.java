@@ -1,8 +1,8 @@
 package com.gm.Algoritmos;
 
-import com.gm.Algoritmos.Interface.ISort;
+import com.gm.Algoritmos.Base.BaseSort;
 
-public class AlgoritmoBubbleSort implements ISort {
+public class AlgoritmoBubbleSort extends BaseSort {
     private void BubbleSort(int[] vetor, int n){
         if (n == 1)
             return;
