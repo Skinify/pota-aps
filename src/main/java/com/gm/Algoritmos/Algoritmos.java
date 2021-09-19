@@ -9,12 +9,12 @@ public class Algoritmos {
     public List<BaseSort> listaDeAlgoritmos = new ArrayList<BaseSort>();
 
     public Algoritmos(){
-        listaDeAlgoritmos.add(new AlgoritmoMergeSort());
-        listaDeAlgoritmos.add(new AlgoritmoQuickSort());
         listaDeAlgoritmos.add(new AlgoritmoBubbleSort());
         listaDeAlgoritmos.add(new AlgoritmoSelectionSort());
         listaDeAlgoritmos.add(new AlgoritmoInsertionSort());
         listaDeAlgoritmos.add(new AlgoritmoHeapSort());
+        listaDeAlgoritmos.add(new AlgoritmoMergeSort());
+        listaDeAlgoritmos.add(new AlgoritmoQuickSort());
         listaDeAlgoritmos.add(new AlgoritmoCountSort());
         listaDeAlgoritmos.add(new AlgoritmoBucketSort());
         listaDeAlgoritmos.add(new AlgoritmoRadixSort());
